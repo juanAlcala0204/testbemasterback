@@ -1,13 +1,15 @@
 require('dotenv').config();
 
 const config = {
-    dev: process.env.NODE_ENV !== 'production',
-    port: process.env.PORT || 3000,
-    cors : process.env.CORS,
-    dbUser : process.env.DB_USER,
-    dbPassword : process.env.DB_PASSWORD,
-    dbHost : process.env.DB_HOST,
-    dbName : process.env.DB_NAME
-}
+  dev: process.env.NODE_ENV !== 'production',
+  port: process.env.PORT || 3000,
+  cors: process.env.CORS,
+  database: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  },
+};
 
-module.exports = { config }
+module.exports = { config };
