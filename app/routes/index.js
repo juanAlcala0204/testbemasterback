@@ -6,6 +6,7 @@
 /** DECLARACIÓN DEPENDENCIAS / UTILIDADES */
 const express = require('express');
 const RoutesLogicModuleCareer = require('./career/routeModuleCareer');
+const RoutesLogicModuleClass = require('./class/routeModuleClass');
 
 /**
  *  FUNCIONALIDAD PRINCIPAL DE ENRUTAMIENTO API Y CONSUMO DE CAPA DE SERVICIOS
@@ -19,6 +20,7 @@ function UniversityApi(app) {
 
     /** OBTENCIÓN DECLARACIÓN DE RUTAS VIEWS */
     RoutesLogicModuleCareer(router);
+    RoutesLogicModuleClass(router);
     return router;
 }
 

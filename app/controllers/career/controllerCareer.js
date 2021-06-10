@@ -69,7 +69,7 @@ class CareerController {
 
             // Uso servicios
             const infoFormated = FormatDataCareerUpdate(infoUpdate.data);
-            const serviceUpdate = await this.service.updateCareer({ data: infoFormated, idCarrera: infoUpdate.idCarrera });
+            const serviceUpdate = await this.service.updateCareer({ data: infoFormated, idCarrera: infoUpdate.idCareer });
 
             if (!serviceUpdate.response) throw "Error failed when execute Service updateCareer";
             
